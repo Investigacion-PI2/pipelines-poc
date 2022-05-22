@@ -22,10 +22,10 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build -x test
-      - name: Run component tests
-        run: ./gradlew test --tests "com.shelter.animalback.component.api.*"
-      - name: Run integration tests
-        run: ./gradlew test --tests "com.shelter.animalback.integration.*"
+#      - name: Run component tests
+#        run: ./gradlew test --tests "com.shelter.animalback.component.api.*"
+#      - name: Run integration tests
+#        run: ./gradlew test --tests "com.shelter.animalback.integration.*"
       - name: Run Contract tests
         run: ./gradlew test --tests "com.shelter.animalback.contract.api.animal.AnimalTest"
         env:
