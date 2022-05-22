@@ -69,14 +69,14 @@ public class AnimalTest {
     public void addAnimal(){
         Animal save = new Animal("Kiara", "Criolla","Female", true, new String[]{"Polio", "Rabia"});
         Animal saved = new Animal(6, "Kiara", "Criolla","Female", true, new String[]{"Polio", "Rabia"});
-        Mockito.when(animalService.save(save)).thenReturn(saved);
+        Mockito.lenient().when(animalService.save(save)).thenReturn(saved);
     }
 
     @State("has an animal to update")
     public void updateAnimal(){
         Animal saved = new Animal(6, "Kiara", "Criolla","Female", false, null);
         Animal updated = new Animal(6, "Kiara", "Criolla","Female", true, new String[]{"Polio", "Rabia"});
-        Mockito.when(animalService.replace("Kiara", saved)).thenReturn(updated);
+        Mockito.lenient().when(animalService.replace("Kiara", saved)).thenReturn(updated);
     }
 
     @State("has an animal to delete")
