@@ -2,6 +2,9 @@ package com.shelter.animalback.integration.db.animal;
 
 import com.shelter.animalback.model.AnimalDao;
 import com.shelter.animalback.repository.AnimalRepository;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,6 +39,11 @@ public class AnimalDataBaseTest {
         assertThat(animalDb.getBreed(), equalTo("Mestizo"));
         assertThat(animalDb.getGender(), equalTo("Female"));
         assertThat(animalDb.isVaccinated(), equalTo(true));
+    }
+
+    @Test
+    public void failTest(){
+        assertTrue(true);
     }
 
     @DynamicPropertySource
