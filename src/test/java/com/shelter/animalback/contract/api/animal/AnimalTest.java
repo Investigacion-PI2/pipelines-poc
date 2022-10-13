@@ -2,10 +2,7 @@ package com.shelter.animalback.contract.api.animal;
 
 import au.com.dius.pact.provider.junit5.PactVerificationContext;
 import au.com.dius.pact.provider.junit5.PactVerificationInvocationContextProvider;
-import au.com.dius.pact.provider.junitsupport.Provider;
 import au.com.dius.pact.provider.junitsupport.State;
-import au.com.dius.pact.provider.junitsupport.loader.PactBroker;
-import au.com.dius.pact.provider.junitsupport.loader.PactBrokerAuth;
 import au.com.dius.pact.provider.spring.junit5.MockMvcTestTarget;
 
 import java.util.ArrayList;
@@ -21,11 +18,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
 
-@PactBroker(url = "https://labregopt.pactflow.io", authentication = @PactBrokerAuth(token = "nXcnCYrui0QVlIO59yhhQg"))
-@Provider("AnimalShelterBack")
-@ExtendWith(MockitoExtension.class)
 public class AnimalTest {
 
     @Mock
