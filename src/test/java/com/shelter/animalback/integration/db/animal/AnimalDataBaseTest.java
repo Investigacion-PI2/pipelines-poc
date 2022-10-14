@@ -43,7 +43,7 @@ public class AnimalDataBaseTest {
 
     @Test
     public void failTest(){
-        assertTrue(true);
+        assertTrue(false);
     }
 
     @DynamicPropertySource
